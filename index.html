@@ -413,34 +413,6 @@
                     <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
                     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
                     <script src="script.js"></script>
-                    <script>
-                        // Initialize EmailJS
-                        emailjs.init('xUUjX03LCmVam2Bw-'); // Make sure this is your correct user ID
-                
-                        // Add event listener to the form submission
-                        document.getElementById('contact-form').addEventListener('submit', function (event) {
-                            event.preventDefault(); // Prevent default form submission
-                
-                            // Collect the form data
-                            const name = document.getElementById('name').value;
-                            const email = document.getElementById('email').value;
-                            const subject = document.getElementById('subject').value;
-                
-                            // Send the email
-                            emailjs.send('service_7sxemg9', 'template_dkmnwen', {
-                                from_name: name,
-                                from_email: email,
-                                message: subject
-                            })
-                                .then(function (response) {
-                                    console.log('SUCCESS!', response.status, response.text);
-                                    alert('Your message has been sent!');
-                                }, function (error) {
-                                    console.error('FAILED...', error);
-                                    alert('Failed to send your message. Please try again later.');
-                                });
-                        });
-                    </script>
                 </body>
                 
                 </html>
